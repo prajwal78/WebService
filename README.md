@@ -43,29 +43,91 @@ The service uses a number of open source technologies:
         $ node server.js
    ```
    7. To test whether the service is whether is or not. Hit the following URL in your browser or any  HTTP debugging proxy server application like Fiddler, Advanced Rest Client
-   ```sh
-        http://localhost:9001/companies
-   ```
+  
 ### API Endpoints
-   The web service can be queried using CURL or any other applications of your choice.
- 
-1. GET /companies
-    ##### Description
-```sh
-       $ curl -i https://mysterious-dawn-80454.herokuapp.com/companies
 
-   ```
+  * **Retrieves all companies**
     
-          ``
+      **Description of URL**
+    ```sh
+    $ https://mysterious-dawn-80454.herokuapp.com/companies
+    ```
+    **Method:**
+    `GET`
+    
+    **Response**
+    
+    ```json
+    [
+    {
+        "company_id": 1,
+        "name": "Tesco",
+        "address": "Whitefield",
+        "city": "Bengaluru",
+        "country": "India",
+        "email": "prajwal.halwai78@gmail.com",
+        "phone_number": 1234567890,
+        "directors": [
+            {
+                "name": "Tilak Doddapeni"
+            }
+        ],
+        "owners": null
+    },
+    {
+        "company_id": 2,
+        "name": "Google",
+        "address": "Whitefield",
+        "city": "hyderabad",
+        "country": "India",
+        "email": "prajwal.halwai78@gmail.com",
+        "phone_number": 1234567890,
+        "directors": [
+            {
+                "name": "Tom Higgins"
+            }
+        ],
+        "owners": null
+    }]
+    ```
+* **Retrieves a inidvidual company based on id**
    
- 2. GET /companies/:id
-       ##### Description
- ```sh
-        $ curl -i https://mysterious-dawn-80454.herokuapp.com/company/1
+    **Description of URL**
 
- ```
+    ```sh
+    $ https://mysterious-dawn-80454.herokuapp.com/company/:id
+    ```
+    **Method:**
+    `GET`
+    
+    **Parameters**
+    
+    ```
+    id:number
+    ```
+    id - The id of the company
+    
+    **Response**
+    
+    ```json
+   [
+    {
+        "company_id": 1,
+        "name": "Tesco",
+        "address": "Whitefield",
+        "city": "Bengaluru",
+        "country": "India",
+        "email": "prajwal.halwai78@gmail.com",
+        "phone_number": 1234567890,
+        "directors": [
+            {
+                "name": "Tilak Doddapeni"
+            }
+        ],
+        "owners": null
+    }]
+    ```
  
-##### Description
  
  3.  PUT /company
        ##### Description
