@@ -24,13 +24,17 @@ The service uses a number of open source technologies:
 1. Install Node from its official website https://nodejs.org/en/download/ based on local machine OS(Windows/Mac/Linux).
   
 2. Download the project from the Github to the local machine.
+
    ```sh
    $ git clone [Git_URL]
    ```
-  3. Locate the project directory.
+   
+3. Locate the project directory.
+
      ```sh
      $ cd [Directory_Name]
      ```
+     
    4. Install all the node.js packages from package.json file.
      ` 
        ```sh
