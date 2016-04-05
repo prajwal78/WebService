@@ -83,16 +83,10 @@ The service uses a number of open source technologies:
  ```
 
 
-   [dill]: <https://github.com/joemccann/dillinger>
-   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
-   [john gruber]: <http://daringfireball.net>
-   [@thomasfuchs]: <http://twitter.com/thomasfuchs>
-   [df1]: <http://daringfireball.net/projects/markdown/>
-   [marked]: <https://github.com/chjj/marked>
-   [Ace Editor]: <http://ace.ajax.org>
-   [node.js]: <http://nodejs.org>
-   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-   [keymaster.js]: <https://github.com/madrobby/keymaster>
-   [jQuery]: <http://jquery.com>
-   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
+   [node.js]: <https://nodejs.org/en/>
+   [restify]: <http://restify.com/>
+   [mlab]:<https://mlab.com/>
+   [mongojs]:<https://www.npmjs.com/package/mongojs>
+   [docker]:<https://www.docker.com/>
+   [heroku]:<https://www.heroku.com/>
    
