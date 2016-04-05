@@ -22,26 +22,28 @@ The service uses a number of open source technologies:
 ### Development
 
 1. Install Node from its official website https://nodejs.org/en/download/ based on local machine OS(Windows/Mac/Linux).
+  
 2. Download the project from the Github to the local machine.
-  ```sh
-        $ git clone [Git_URL]
+   ```sh
+   $ git clone [Git_URL]
    ```
   3. Locate the project directory.
-  ```sh
-        $ cd [Directory_Name]
-   ```
+     ```sh
+     $ cd [Directory_Name]
+     ```
    4. Install all the node.js packages from package.json file.
-   ```sh
-        $ npm install
-   ```
+     ` 
+       ```sh
+      $ npm install 
+        ```
    5. Set the node environment variable to development
-   ```sh
-        $ set NODE_ENV=dev
-   ```
+      ```sh
+      $ set NODE_ENV=dev
+      ```
    6. To start the node server
-   ```sh
-        $ node server.js
-   ```
+      ```sh
+      $ node server.js
+      ```
    7. To test whether the service is whether is or not. Hit the following URL in your browser or any  HTTP debugging proxy server application like Fiddler, Advanced Rest Client
   
 ### API Endpoints
