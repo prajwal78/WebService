@@ -109,7 +109,7 @@ The service uses a number of open source technologies:
 
 
 
-* **Retrieves a inidvidual company based on id**
+* **Retrieves a individual company based on id**
    
     **Description of URL**
 
@@ -147,7 +147,23 @@ The service uses a number of open source technologies:
     }]
     ```
  
- 
+ * **Update details of a company**
+   
+    **Description of URL**
+
+    ```sh
+    $ curl --request PUT --url 'https://mysterious-dawn-80454.herokuapp.com/company' --header 'content-type: application/json' --data '{"company":{"company_id": 6,"name": "Dell","address": "Brigade Road","city": "Bengaluru","country": "India","email":"dell@123.com","phone_number":123467890,"directors":["Tilak Doddapeni","Rekha Warrier","Vidya Laxman","Tom Higgins"],"owners":["Sanjeev Kumar","Prajwal Halwai","Pooja Gee"]}}' --include
+    ```
+    
+    **Method:**
+    `PUT`
+    
+    **Response**
+    
+    ```
+    message: "Company details updated to the database!!!"
+    ```
+    
  3.  PUT /company
        ##### Description
  ```sh
