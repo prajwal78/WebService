@@ -90,6 +90,9 @@ The service uses a number of open source technologies:
         "owners": null
     }]
     ```
+
+
+
 * **Retrieves a inidvidual company based on id**
    
     **Description of URL**
