@@ -1,6 +1,0 @@
-{
-  "image": "heroku/nodejs",
-  "addons": [
-    "heroku-nodejs"
-  ]
-}
