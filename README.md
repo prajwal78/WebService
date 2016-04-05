@@ -164,15 +164,25 @@ The service uses a number of open source technologies:
     message: "Company details updated to the database!!!"
     ```
     
+* **Add new company**
+   
+    **Description of URL**
 
- ```
- 
-  4. POST /company
-      ##### Description
- ```sh
-         $ curl --request POST --url 'https://mysterious-dawn-80454.herokuapp.com/company' --header 'content-type: application/json' --data '{"company":{"company_id": 6,"name": "Dell","address": "Brigade Road","city": "Bengaluru","country": "India","email":"dell@123.com","phone_number":123467890,"directors":["Tilak Doddapeni","Rekha Warrier","Vidya Laxman","Tom Higgins"],"owners":["Sanjeev Kumar","Prajwal Halwai","Pooja Gee"]}}' --include
+     ```sh
+     $ curl --request POST --url 'https://mysterious-dawn-80454.herokuapp.com/company' --header 'content-type: application/json' --data '{"company":{"company_id": 6,"name": "Dell","address": "Brigade Road","city": "Bengaluru","country": "India","email":"dell@123.com","phone_number":123467890,"directors":["Tilak Doddapeni","Rekha Warrier","Vidya Laxman","Tom Higgins"],"owners":["Sanjeev Kumar","Prajwal Halwai","Pooja Gee"]}}' --include
+    ```
+    
+    **Method:**
+    `POST`
+    
+    **Response**
+    
+    ```
+    message: "New company added to the database!!!"
+    ```
+    
+    
 
- ```
 
 
    [node.js]: <https://nodejs.org/en/>
