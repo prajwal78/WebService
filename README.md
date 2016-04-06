@@ -181,6 +181,19 @@ The service uses a number of open source technologies:
     message: "New company added to the database!!!"
     ```
     
+    ### Authentication
+    
+    There is no authentication layer added to the service. But, if authentication is to be integrated, token based authentication fits well. 
+    
+    We can achieve token based authentication using JSON Web Tokens(JWTs). JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties i.e., client and server.
+    
+    ![Token-base Auth](https://github.com/prajwal78/WebService/blob/master/images/%20Token-based%20Auth.jpg "Token-base Auth")
+
+  
+  
+    
+    
+    
     
 
 
@@ -191,4 +204,5 @@ The service uses a number of open source technologies:
    [mongojs]:<https://www.npmjs.com/package/mongojs>
    [docker]:<https://www.docker.com/>
    [heroku]:<https://www.heroku.com/>
+   [logo]: https://github.com/prajwal78/WebService/blob/master/images/Architecture.pdf "Architecture"
    
