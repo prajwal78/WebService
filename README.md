@@ -21,7 +21,7 @@ The service uses a number of open source technologies:
 
 ### Architecture
 
-![arhitecture](https://github.com/prajwal78/WebService/blob/master/images/Architecture.pdf "architecture")
+![architecture](https://github.com/prajwal78/WebService/blob/master/images/Architecture.pdf "architecture")
 
 ### Development
 
