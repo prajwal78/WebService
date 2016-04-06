@@ -215,7 +215,7 @@ The service uses a number of open source technologies:
    
    If a single server goes down and is unable to serve the client's requests, then that server is unable to process the requests. The server should have the failover mechanism to the route the request to the next available sever to ensure that the clients don't receive an outright error or failure. 
    
-   Here, high availablity plays a huge role to serve all the client's request without any failure which can be done by using a load balancer.The ```load balancer``` is the key component that ensures high availability. The load balancer intelligently routes client requests to the right server, in a manner that maximizes performance and capacity utilization while sending requests only to servers that are online. 
+   Here, high availablity plays a huge role to serve all the client's request without any failure which can be done by using a load balancer.The ```load balancer``` is the key component that ensures high availability. The load balancer intelligently routes client requests to the right server, in a manner that maximizes performance and capacity utilization while sending requests only to servers that are online. A load balancer sits in front of the server group and routes traffic to individual servers in a way that maximizes efficiency. 
    
    ![load balancer](https://github.com/prajwal78/WebService/blob/master/images/load-balancing.png "load balancer")
    
