@@ -187,9 +187,7 @@ The service uses a number of open source technologies:
     
     We can achieve token based authentication using JSON Web Tokens(JWTs).
     
-    JSON Web Token is a JSON-based open standard (RFC 7519) for passing claims between parties in web application environment. It comprises a compact and URL-safe JSON object, which is cryptographically signed to verify its authenticity, and which can also be encrypted if the payload contains sensitive information. 
-
-    For more info, please visit https://jwt.io/.
+    JSON Web Token is a JSON-based open standard (RFC 7519) for passing claims between parties in web application environment. For more info, please visit https://jwt.io/.
 
     ![Token-base Auth](https://github.com/prajwal78/WebService/blob/master/images/%20Token-based%20Auth.jpg "Token-base Auth")
     
@@ -206,6 +204,25 @@ The service uses a number of open source technologies:
     3. Security: Since we are not using cookies, we don’t have to protect against cross-site request forgery (CSRF) attacks. We should still encrypt our tokens using JWE if we have to put any sensitive information in them, and transmit our tokens over HTTPS to prevent man-in-the-middle attacks.
 
    4. Performance: There is no server side lookup to find and deserialize the session on each request. The only thing we have to do is calculate the HMAC SHA-256 to validate the token and parse its content.
+   
+  ### How to make web service redundant?
+
+   It can be achieved by introducing the concept of high availability.
+   
+   ```High availability``` is a computing concept whereby a server fulfilling a user’s request does so with the utmost reliability, by using built-in failover mechanisms that mitigate against the effects of any one component failing. High availability is often measured in terms of the percentage of the time that service is available to clients. A 99.999% uptime rating, also known as “five nines,” translates to approximately 5&nsp;minutes of downtime per year.
+ 
+   Suppose, the web service is hosted in 10 different web servers in a server farm which are connected to the database servers hosted on the cloud. The web traffic from the clients is equally distributed among all the servers.
+   
+   If a single server goes down and is unable to serve the client's requests, then that server is unable to process the requests. The server should have the failover mechanism to the route the request to the next available sever to ensure that the clients don’t receive an outright error or failure. 
+   
+   Here, high availablity plays a huge role to serve all the client's request without any failure which can be done by using a load balancer.The ```load balancer``` is the key component that ensures high availability. The load balancer intelligently routes client requests to the right server, in a manner that maximizes performance and capacity utilization while sending requests only to servers that are online. 
+   
+   ![load balancer]https://github.com/prajwal78/WebService/blob/master/images/load-balancing.png "load balancer")
+   
+   
+   
+
+
     
     
     
