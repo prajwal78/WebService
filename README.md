@@ -191,13 +191,21 @@ The service uses a number of open source technologies:
 
     ![Token-base Auth](https://github.com/prajwal78/WebService/blob/master/images/%20Token-based%20Auth.jpg "Token-base Auth")
     
-    In the above diagram, there is a client communicating to the server to access its resources over the HTTP.
+    In the above diagram, there is the browser communicating to the server to access its resources over the HTTP.
     
-    Firstly, the client sends a request with username and password to the server for authentication. The server verifys the client's credentials and generates a token for the client if the credentials is valid. The token is sent back as response from the server. The client is authenticated to access the resources.
+    A browser makes a request to the server containing user login information. The server generates a new JWT access token and returns it to the client. On every request to a restricted resource, the client sends the access token in the query string or Authorization header. The server then validates the token and, if it’s valid, returns the secure resource to the client.
     
-    Secondly, the token recieved is stored in local storage of the browser. The client makes another request to access the resources. In order to server authorize to access the resources, the client attaches the token to the request header and the server validates the token.
+    ###### Why should you use it?
     
-    Finally, the server sent back the data as response to the client had requested for.
+    1. Stateless, easier to scale: The token contains all the information to identify the user, eliminating the need for the session state. If we use a load balancer, we can pass the user to any server, instead of being bound to the same server we logged in on.
+
+    2. Reusability: We can have many separate servers, running on multiple platforms and domains, reusing the same token for authenticating the user. It is easy to build an application that shares permissions with another application.
+
+    3. Security: Since we are not using cookies, we don’t have to protect against cross-site request forgery (CSRF) attacks. We should still encrypt our tokens using JWE if we have to put any sensitive information in them, and transmit our tokens over HTTPS to prevent man-in-the-middle attacks.
+
+   4. Performance: There is no server side lookup to find and deserialize the session on each request. The only thing we have to do is calculate the HMAC SHA-256 to validate the token and parse its content.
+    
+    
     
     
 
