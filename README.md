@@ -19,6 +19,10 @@ The service uses a number of open source technologies:
 * [docker] -  packaging applications into containers
 * [heroku] - builiding and deploying applications
 
+### Architecture
+
+![arhitecture](https://github.com/prajwal78/WebService/blob/master/images/Architecture.pdf "architecture")
+
 ### Development
 
 1. Install Node from its official website https://nodejs.org/en/download/ based on local machine OS(Windows/Mac/Linux).
