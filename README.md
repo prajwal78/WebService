@@ -191,11 +191,11 @@ The service uses a number of open source technologies:
     
     In the above diagram, there is a client communicating to the server to access its resources using the HTTP protocol.
     
-    Firstly, the client sends a request with username and password to the server. The server verifys the client's credentials and generates a token for the client which can be later used for authorization. The token is sent back as repsonse from the server. Now, the client is authenticated.
+    Firstly, the client sends a request with username and password to the server for authentication. The server verifys the client's credentials and generates a token for the client if the credentials is valid. The token is sent back as response from the server. The client is authenticated to access the resources.
     
     Secondly, the token recieved is stored in local storage of the browser. The client makes another request to access the resources. In order to server authorize to access the resources, the client attaches the token to the request header and the server validates the token.
     
-    Finally the server sent back the data as response to the client had requested for.
+    Finally, the server sent back the data as response to the client had requested for.
     
     
 
