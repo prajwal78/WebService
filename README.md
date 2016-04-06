@@ -185,9 +185,19 @@ The service uses a number of open source technologies:
     
     There is no authentication layer added to the service. But, if authentication is to be integrated, token based authentication fits well. 
     
-    We can achieve token based authentication using JSON Web Tokens(JWTs). JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties i.e., client and server.
+    We can achieve token based authentication using JSON Web Tokens(JWTs).
     
     ![Token-base Auth](https://github.com/prajwal78/WebService/blob/master/images/%20Token-based%20Auth.jpg "Token-base Auth")
+    
+    In the above diagram, there is a client communicating to the server to access its resources using the HTTP protocol.
+    
+    Firstly, the client sends a request with username and password to the server. The server verifys the client's credentials and generates a token for the client which can be later used for authorization. The token is sent back as repsonse from the server. Now, the client is authenticated.
+    
+    Secondly, the token recieved is stored in local storage of the browser. The client makes another request to access the resources. In order to server authorize to access the resources, the client attaches the token to the request header and the server validates the token.
+    
+    Finally the server sent back the data as response to the client had requested for.
+    
+    
 
   
   
