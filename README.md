@@ -181,6 +181,19 @@ The service uses a number of open source technologies:
     message: "New company added to the database!!!"
     ```
     
+    ### Deployment
+    
+    The web service is deployed to ```Heroku Cloud Platform``` using ```Docker```.
+    
+    ### Database
+    
+    The database used is NOSQL database named ```MongoDB``` which is hosted on the cloud.
+    
+    ``` Database```: CompanyDetails
+    
+    ``` Collection```: details
+    
+    
     ### Authentication
     
     There is no authentication layer added to the service. But, if authentication is to be integrated, token based authentication fits well. 
