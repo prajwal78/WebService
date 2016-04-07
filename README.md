@@ -1,6 +1,6 @@
 # Company Web service
 
-It is a tiny RESTful service supporting an API with the following functionalities: 
+It is a RESTful service supporting an API with the following functionalities: 
 
   - Registering a new company
   - Fetch list of all registered companies
