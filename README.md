@@ -71,7 +71,7 @@ The service uses a number of open source technologies:
     
       **Description of URL**
     ```sh
-    $ https://mysterious-dawn-80454.herokuapp.com/companies
+    $ https://young-atoll-83319.herokuapp.com/companies
     ```
     **Method:**
     `GET`
@@ -119,7 +119,7 @@ The service uses a number of open source technologies:
     **Description of URL**
 
     ```sh
-    $ https://mysterious-dawn-80454.herokuapp.com/company/:id
+    $ https://young-atoll-83319.herokuapp.com/company/:id
     ```
     **Method:**
     `GET`
@@ -157,7 +157,7 @@ The service uses a number of open source technologies:
     **Description of URL**
 
     ```sh
-    $ curl --request PUT --url 'https://mysterious-dawn-80454.herokuapp.com/company' --header 'content-type: application/json' --data '{"company":{"company_id": 6,"name": "Dell","address": "Brigade Road","city": "Bengaluru","country": "India","email":"dell@123.com","phone_number":123467890,"directors":["Tilak Doddapeni","Rekha Warrier","Vidya Laxman","Tom Higgins"],"owners":["Sanjeev Kumar","Prajwal Halwai","Pooja Gee"]}}' --include
+    $ curl --request PUT --url 'https://young-atoll-83319.herokuapp.com/company' --header 'content-type: application/json' --data '{"company":{"company_id": 6,"name": "Dell","address": "Brigade Road","city": "Bengaluru","country": "India","email":"dell@123.com","phone_number":123467890,"directors":["Tilak Doddapeni","Rekha Warrier","Vidya Laxman","Tom Higgins"],"owners":["Sanjeev Kumar","Prajwal Halwai","Pooja Gee"]}}' --include
     ```
     
     **Method:**
@@ -174,7 +174,7 @@ The service uses a number of open source technologies:
     **Description of URL**
 
      ```sh
-     $ curl --request POST --url 'https://mysterious-dawn-80454.herokuapp.com/company' --header 'content-type: application/json' --data '{"company":{"company_id": 6,"name": "Dell","address": "Brigade Road","city": "Bengaluru","country": "India","email":"dell@123.com","phone_number":123467890,"directors":["Tilak Doddapeni","Rekha Warrier","Vidya Laxman","Tom Higgins"],"owners":["Sanjeev Kumar","Prajwal Halwai","Pooja Gee"]}}' --include
+     $ curl --request POST --url 'https://young-atoll-83319.herokuapp.com/company' --header 'content-type: application/json' --data '{"company":{"company_id": 6,"name": "Dell","address": "Brigade Road","city": "Bengaluru","country": "India","email":"dell@123.com","phone_number":123467890,"directors":["Tilak Doddapeni","Rekha Warrier","Vidya Laxman","Tom Higgins"],"owners":["Sanjeev Kumar","Prajwal Halwai","Pooja Gee"]}}' --include
     ```
     
     **Method:**
