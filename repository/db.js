@@ -1,10 +1,12 @@
 var mongojs = require('mongojs'),
+    databaseURL = 'mongodb://abcd:abcd123@ds011820.mlab.com:11820/companydetails',
     config = require('../config/config'),
-    db = mongojs('mongodb://abcd:abcd123@ds011820.mlab.com:11820/companydetails', ['details']);
+    db = mongojs(databaseURL),
+    test = db.collection('details');
 
 module.exports = {
     getCompanies: function(req, res, callback) {
-        db.details.find(null, {
+        test.find(null, {
                 _id: 0
             },
             function(err, data) {
@@ -19,7 +21,7 @@ module.exports = {
         var query = {
             company_id: id
         }
-        db.details.find(query, {
+        test.find(query, {
                 _id: 0
             },
             function(err, data) {
@@ -40,14 +42,14 @@ module.exports = {
         var query = {
             company_id: req.body.company.company_id
         }
-        db.details.find(query, function(err, data) {
+        test.find(query, function(err, data) {
             if (data.length > 0) {
                 var msg = {
                     message: "Company already exists!!!"
                 };
                 callback(null, msg);
             } else {
-                db.details.insert(newCompany, function(err, data) {
+                test.insert(newCompany, function(err, data) {
                     if (err) {
                         logger.error(err);
                     }
@@ -76,9 +78,9 @@ module.exports = {
                 owners: req.body.company.owners
             }
         }
-        db.details.find(query, function(err, data) {
+        test.find(query, function(err, data) {
             if (data.length > 0) {
-                db.details.update(query, updateCompany, {
+                test.update(query, updateCompany, {
                     multi: false
                 }, function(err, data) {
                     if (err) {
@@ -97,31 +99,5 @@ module.exports = {
             }
         });
     }
-    // addBeneficialOwners: function(req, res, callback) {
-    //     var id = req.params.id;
-    //     var query = {
-    //         company_id: req.body.company.company_id
-    //     }
-    //     var addOwners = {
-    //         $set: {
-    //             owners: req.body.company.owners
-    //         }
-    //     }
-    //     db.details.find(query, function(err, data) {
-    //         if (data.length > 0) {
-    //             db.details.findAndModify(query, addOwners, {
-    //                 new: true
-    //             }, function(err, data) {
-    //                 if (err) {
-    //                     logger.error(err);
-    //                 }
-    //                 var msg = "Owners updated to the database";
-    //                 callback(null, msg);
-    //             })
-    //         } else {
-    //             var msg = "No company exists";
-    //             callback(null, msg);
-    //         }
-    //     });
-    // }
+
 }
